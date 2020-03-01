@@ -7,13 +7,15 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.databinding.DataBindingUtil
+import com.sans.orderrbarang.databinding.FragmentMenu1Binding
 import kotlinx.android.synthetic.main.fragment_menu1.*
 
 /**
  * A simple [Fragment] subclass.
  */
 class Menu1Fragment : Fragment() {
-    private lateinit var binding: Menu1Fragment
+    private lateinit var binding: FragmentMenu1Binding
     private var jumlahString: String = ""
     private var jumlah: Int = 0
     private var harga: Int = 0
@@ -26,17 +28,18 @@ class Menu1Fragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        binding.btn_plus.setOnClickListener {
-            jumlahString = binding.tv_nilai.text.toString()
+        binding = DataBindingUtil.inflate<FragmentMenu1Binding>(inflater,R.layout.fragment_menu1,container,false)
+        binding.btnPlus.setOnClickListener {
+            jumlahString = binding.tvNilai.text.toString()
             jumlah = jumlahString.toInt() + 1
-            binding.tv_nilai.setText(jumlah.toString())
+            binding.tvNilai.setText(jumlah.toString())
 
         }
 
-        binding.bt_minus.setOnClickListener {
+        binding.btMinus.setOnClickListener {
             if (tv_nilai.text.toString().toInt() > 0) {
-                jumlah = binding.tv_nilai.text.toString().toInt() - 1
-                binding.tv_nilai.setText(jumlah.toString())
+                jumlah = binding.tvNilai.text.toString().toInt() - 1
+                binding.tvNilai.setText(jumlah.toString())
             } else {
                 Toast.makeText(this.context, "Tidak Bisa kurang dari 0", Toast.LENGTH_LONG).show()
 
@@ -69,8 +72,9 @@ class Menu1Fragment : Fragment() {
                 hasilkue = "Kue Strawberry "
                 binding.tv_kuee.setText(hasilkue)
             }
-        return binding.root
-
-    }
+        //return binding.root
+            return binding.root
+        }
 
 }
+
