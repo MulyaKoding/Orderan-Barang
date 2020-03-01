@@ -1,3 +1,30 @@
 <resources>
     <string name="app_name">OrderrBarang</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="nama_rahmat_mulya_simanjuntak">Nama : Rahmat Mulya Simanjuntak</string>
+    <string name="nim_6706174034">NIM : 6706174034</string>
+    <string name="kelas">Kelas</string>
+    <string name="ke_menu_satu">Ke Menu Satu</string>
+    <string name="ke_menu_2">Ke Menu 2</string>
+    <string name="pemesanan_makanan">Pemesanan Makanan</string>
+    <string name="kue">Kue</string>
+    <string name="minus">-</string>
+    <string name="nol">0</string>
+    <string name="plus">+</string>
+    <string name="topping">Topping</string>
+    <string name="ice_cream">Ice Cream</string>
+    <string name="ceres">Ceres</string>
+    <string name="rasa">Rasa</string>
+    <string name="coklat">Coklat</string>
+    <string name="strawberry">Strawberry</string>
+    <string name="nama_pemesan">Nama Pemesan</string>
+    <string name="beli">Beli</string>
+    <string name="reset">Reset</string>
+    <string name="struk_pembelian">Struk Pembelian</string>
+    <string name="pembeli">Pembeli</string>
+    <string name="kue_apa">Kue apa ?</string>
+    <string name="hargax">Hargax</string>
+    <string name="share">Share</string>
 </resources>
