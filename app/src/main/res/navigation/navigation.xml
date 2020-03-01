@@ -10,16 +10,19 @@
         android:label="fragment_about"
         tools:layout="@layout/fragment_about" />
     <fragment
-        android:id="@+id/mainFragment2"
+        android:id="@+id/mainFragment"
         android:name="com.sans.orderrbarang.MainFragment"
-        android:label="fragment_main"
-        tools:layout="@layout/fragment_main" >
+        android:label="main"
+        tools:layout="@layout/fragment_main">
         <action
             android:id="@+id/action_mainFragment2_to_menu1Fragment"
             app:destination="@id/menu1Fragment" />
         <action
             android:id="@+id/action_mainFragment2_to_menu2Fragment"
             app:destination="@id/menu2Fragment" />
+        <argument
+            android:name="status"
+            app:argType="integer" />
     </fragment>
     <fragment
         android:id="@+id/menu1Fragment"
@@ -28,7 +31,10 @@
         tools:layout="@layout/fragment_menu1" >
         <action
             android:id="@+id/action_menu1Fragment_to_mainFragment2"
-            app:destination="@id/mainFragment2" />
+            app:destination="@id/mainFragment" />
+        <argument
+            android:name="status"
+            app:argType="integer" />
     </fragment>
     <fragment
         android:id="@+id/menu2Fragment"
@@ -37,6 +43,9 @@
         tools:layout="@layout/fragment_menu2" >
         <action
             android:id="@+id/action_menu2Fragment_to_mainFragment2"
-            app:destination="@id/mainFragment2" />
+            app:destination="@id/mainFragment" />
+        <argument
+            android:name="status"
+            app:argType="integer" />
     </fragment>
 </navigation>

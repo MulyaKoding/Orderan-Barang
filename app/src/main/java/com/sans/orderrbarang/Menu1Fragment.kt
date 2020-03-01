@@ -11,7 +11,7 @@ import android.view.ViewGroup
  * A simple [Fragment] subclass.
  */
 class Menu1Fragment : Fragment() {
-
+    private lateinit var binding: Menu1Fragment
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

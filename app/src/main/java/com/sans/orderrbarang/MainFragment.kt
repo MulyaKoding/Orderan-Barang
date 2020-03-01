@@ -24,7 +24,15 @@ class MainFragment : Fragment() {
             R.layout.fragment_main, container, false
         )
         binding.main = this
+        binding.tvMenu1.setOnClickListener {
+            view?.findNavController()
+                ?.navigate(MainFragmentDirections.actionMainFragment2ToMenu1Fragment(0))
+        }
 
+        binding.btMenu2.setOnClickListener {
+            view?.findNavController()
+                ?.navigate(MainFragmentDirections.actionMainFragment2ToMenu2Fragment(1))
+        }
         setHasOptionsMenu(true)
         return binding.root
 
