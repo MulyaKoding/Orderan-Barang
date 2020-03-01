@@ -5,6 +5,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".Menu1Fragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -137,7 +141,7 @@
         app:layout_constraintHorizontal_bias="0.45"
         app:layout_constraintStart_toEndOf="@+id/cb_icecream"
         app:layout_constraintTop_toBottomOf="@+id/tv_topping"
-        app:layout_constraintVertical_bias="0.050000012" />
+        app:layout_constraintVertical_bias="0.01999998" />
 
     <TextView
         android:id="@+id/tv_rasa"
@@ -311,4 +315,5 @@
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
-</layout>
+    </ScrollView>
+    </layout>
