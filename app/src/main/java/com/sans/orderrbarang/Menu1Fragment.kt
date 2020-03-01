@@ -11,6 +11,7 @@ import androidx.databinding.DataBindingUtil
 import com.sans.orderrbarang.databinding.FragmentMenu1Binding
 import kotlinx.android.synthetic.main.fragment_menu1.*
 
+
 /**
  * A simple [Fragment] subclass.
  */
@@ -29,17 +30,17 @@ class Menu1Fragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         binding = DataBindingUtil.inflate<FragmentMenu1Binding>(inflater,R.layout.fragment_menu1,container,false)
-        binding.btnPlus.setOnClickListener {
-            jumlahString = binding.tvNilai.text.toString()
+        binding.btnplus.setOnClickListener {
+            jumlahString = binding.tvnilai.text.toString()
             jumlah = jumlahString.toInt() + 1
-            binding.tvNilai.setText(jumlah.toString())
+            binding.tvnilai.setText(jumlah.toString())
 
         }
 
-        binding.btMinus.setOnClickListener {
-            if (tv_nilai.text.toString().toInt() > 0) {
-                jumlah = binding.tvNilai.text.toString().toInt() - 1
-                binding.tvNilai.setText(jumlah.toString())
+        binding.btminus.setOnClickListener {
+            if (tvnilai.text.toString().toInt() > 0) {
+                jumlah = binding.tvnilai.text.toString().toInt() - 1
+                binding.tvnilai.setText(jumlah.toString())
             } else {
                 Toast.makeText(this.context, "Tidak Bisa kurang dari 0", Toast.LENGTH_LONG).show()
 
@@ -47,30 +48,30 @@ class Menu1Fragment : Fragment() {
             }
         }
         harga = 0
-        binding.bt_beli.setOnClickListener {
+        binding.btbeli.setOnClickListener {
             toopling = 0
-            if (binding.cb_icecream.isChecked) {
+            if (binding.cbicecream.isChecked) {
                 toopling += 2000
             }
         }
-        if (binding.cb_ceres.isChecked) {
+        if (binding.cbceres.isChecked) {
             toopling += 1000
         }
 
-        harga = binding.tv_nilai.text.toString().toInt() * 5000 + toopling
+        harga = binding.tvnilai.text.toString().toInt() * 5000 + toopling
 
-        binding.tv_harga.setText(harga.toString())
+        binding.tvharga.setText(harga.toString())
 
-        nama = binding.et_pemesan.text.toString()
-        binding.et_pembeli.setText(nama)
+        nama = binding.etpemesan.text.toString()
+        binding.etpembeli.setText(nama)
 
-        if (binding.rb_coklat.isChecked) {
+        if (binding.rbcoklat.isChecked) {
             hasilkue = "Kue Coklat"
-            binding.tv_kuee.setText(hasilkue)
+            binding.tvkuee.setText(hasilkue)
         } else
-            if (binding.rb_Strawberry.isChecked) {
+            if (binding.rbStrawberry.isChecked) {
                 hasilkue = "Kue Strawberry "
-                binding.tv_kuee.setText(hasilkue)
+                binding.tvkuee.setText(hasilkue)
             }
         //return binding.root
             return binding.root
